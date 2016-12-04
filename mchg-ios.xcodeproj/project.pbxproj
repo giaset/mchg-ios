@@ -8,20 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		68F8FE871DF4D1B00032B912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8FE861DF4D1B00032B912 /* AppDelegate.swift */; };
-		68F8FE891DF4D1B00032B912 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8FE881DF4D1B00032B912 /* ViewController.swift */; };
-		68F8FE8C1DF4D1B00032B912 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68F8FE8A1DF4D1B00032B912 /* Main.storyboard */; };
 		68F8FE8E1DF4D1B00032B912 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68F8FE8D1DF4D1B00032B912 /* Assets.xcassets */; };
 		68F8FE911DF4D1B00032B912 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68F8FE8F1DF4D1B00032B912 /* LaunchScreen.storyboard */; };
+		68F8FE991DF4D2D70032B912 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8FE981DF4D2D70032B912 /* FeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		68F8FE831DF4D1AF0032B912 /* mchg-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mchg-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68F8FE861DF4D1B00032B912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		68F8FE881DF4D1B00032B912 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		68F8FE8B1DF4D1B00032B912 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68F8FE8D1DF4D1B00032B912 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68F8FE901DF4D1B00032B912 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68F8FE921DF4D1B00032B912 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68F8FE981DF4D2D70032B912 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				68F8FE861DF4D1B00032B912 /* AppDelegate.swift */,
-				68F8FE881DF4D1B00032B912 /* ViewController.swift */,
-				68F8FE8A1DF4D1B00032B912 /* Main.storyboard */,
+				68F8FE981DF4D2D70032B912 /* FeedViewController.swift */,
 				68F8FE8D1DF4D1B00032B912 /* Assets.xcassets */,
 				68F8FE8F1DF4D1B00032B912 /* LaunchScreen.storyboard */,
 				68F8FE921DF4D1B00032B912 /* Info.plist */,
@@ -126,7 +123,6 @@
 			files = (
 				68F8FE911DF4D1B00032B912 /* LaunchScreen.storyboard in Resources */,
 				68F8FE8E1DF4D1B00032B912 /* Assets.xcassets in Resources */,
-				68F8FE8C1DF4D1B00032B912 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68F8FE891DF4D1B00032B912 /* ViewController.swift in Sources */,
+				68F8FE991DF4D2D70032B912 /* FeedViewController.swift in Sources */,
 				68F8FE871DF4D1B00032B912 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,14 +141,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		68F8FE8A1DF4D1B00032B912 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				68F8FE8B1DF4D1B00032B912 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		68F8FE8F1DF4D1B00032B912 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -261,6 +249,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PRZU7H23QD;
 				INFOPLIST_FILE = "mchg-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.miltonandparc.mchg-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -274,6 +263,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PRZU7H23QD;
 				INFOPLIST_FILE = "mchg-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.miltonandparc.mchg-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
