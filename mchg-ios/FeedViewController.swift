@@ -12,6 +12,10 @@ class FeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.red
+        GrailedStore.getListings(page: 1) { listings, error in
+            for listing in listings ?? [] {
+                print(listing.id)
+            }
+        }
     }
 }

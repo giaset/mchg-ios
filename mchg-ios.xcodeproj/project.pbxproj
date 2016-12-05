@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		684898A31DF5006E00BDDA3E /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684898A21DF5006E00BDDA3E /* Listing.swift */; };
 		68F8FE871DF4D1B00032B912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8FE861DF4D1B00032B912 /* AppDelegate.swift */; };
 		68F8FE8E1DF4D1B00032B912 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68F8FE8D1DF4D1B00032B912 /* Assets.xcassets */; };
 		68F8FE911DF4D1B00032B912 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68F8FE8F1DF4D1B00032B912 /* LaunchScreen.storyboard */; };
 		68F8FE991DF4D2D70032B912 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8FE981DF4D2D70032B912 /* FeedViewController.swift */; };
+		68F8FE9B1DF4F01F0032B912 /* GrailedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8FE9A1DF4F01F0032B912 /* GrailedStore.swift */; };
 		7DDBA0F4492ECE7CBEBDEAF0 /* Pods_mchg_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C09EB380D6C715E3680BB1A /* Pods_mchg_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A19B3DF9EB2C68687C18DAF /* Pods-mchg-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mchg-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-mchg-ios/Pods-mchg-ios.release.xcconfig"; sourceTree = "<group>"; };
+		684898A21DF5006E00BDDA3E /* Listing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
 		68F8FE831DF4D1AF0032B912 /* mchg-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mchg-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68F8FE861DF4D1B00032B912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68F8FE8D1DF4D1B00032B912 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68F8FE901DF4D1B00032B912 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68F8FE921DF4D1B00032B912 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68F8FE981DF4D2D70032B912 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		68F8FE9A1DF4F01F0032B912 /* GrailedStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrailedStore.swift; sourceTree = "<group>"; };
 		8C09EB380D6C715E3680BB1A /* Pods_mchg_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mchg_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD18835226B734EE29EBBF64 /* Pods-mchg-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mchg-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mchg-ios/Pods-mchg-ios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +76,8 @@
 				68F8FE8D1DF4D1B00032B912 /* Assets.xcassets */,
 				68F8FE8F1DF4D1B00032B912 /* LaunchScreen.storyboard */,
 				68F8FE921DF4D1B00032B912 /* Info.plist */,
+				68F8FE9A1DF4F01F0032B912 /* GrailedStore.swift */,
+				684898A21DF5006E00BDDA3E /* Listing.swift */,
 			);
 			path = "mchg-ios";
 			sourceTree = "<group>";
@@ -208,7 +214,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68F8FE9B1DF4F01F0032B912 /* GrailedStore.swift in Sources */,
 				68F8FE991DF4D2D70032B912 /* FeedViewController.swift in Sources */,
+				684898A31DF5006E00BDDA3E /* Listing.swift in Sources */,
 				68F8FE871DF4D1B00032B912 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +375,7 @@
 				68F8FE971DF4D1B00032B912 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
