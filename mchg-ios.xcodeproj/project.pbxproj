@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		684898A31DF5006E00BDDA3E /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684898A21DF5006E00BDDA3E /* Listing.swift */; };
+		68EAFA251DF6881E00123162 /* FeedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EAFA241DF6881E00123162 /* FeedCollectionView.swift */; };
+		68EAFA2A1DF68C0E00123162 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EAFA291DF68C0E00123162 /* Extensions.swift */; };
+		68EAFA2C1DF6936C00123162 /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EAFA2B1DF6936C00123162 /* FeedCollectionViewCell.swift */; };
 		68F8FE871DF4D1B00032B912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8FE861DF4D1B00032B912 /* AppDelegate.swift */; };
 		68F8FE8E1DF4D1B00032B912 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68F8FE8D1DF4D1B00032B912 /* Assets.xcassets */; };
 		68F8FE911DF4D1B00032B912 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68F8FE8F1DF4D1B00032B912 /* LaunchScreen.storyboard */; };
@@ -19,6 +22,9 @@
 /* Begin PBXFileReference section */
 		0A19B3DF9EB2C68687C18DAF /* Pods-mchg-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mchg-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-mchg-ios/Pods-mchg-ios.release.xcconfig"; sourceTree = "<group>"; };
 		684898A21DF5006E00BDDA3E /* Listing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
+		68EAFA241DF6881E00123162 /* FeedCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCollectionView.swift; sourceTree = "<group>"; };
+		68EAFA291DF68C0E00123162 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		68EAFA2B1DF6936C00123162 /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
 		68F8FE831DF4D1AF0032B912 /* mchg-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mchg-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68F8FE861DF4D1B00032B912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68F8FE8D1DF4D1B00032B912 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,6 +56,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		68EAFA261DF6882600123162 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				68EAFA241DF6881E00123162 /* FeedCollectionView.swift */,
+				68EAFA2B1DF6936C00123162 /* FeedCollectionViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		68EAFA271DF6885800123162 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				68F8FE981DF4D2D70032B912 /* FeedViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		68EAFA281DF6886600123162 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				684898A21DF5006E00BDDA3E /* Listing.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		68F8FE7A1DF4D1AF0032B912 = {
 			isa = PBXGroup;
 			children = (
@@ -71,13 +102,15 @@
 		68F8FE851DF4D1AF0032B912 /* mchg-ios */ = {
 			isa = PBXGroup;
 			children = (
+				68EAFA271DF6885800123162 /* Controllers */,
+				68EAFA281DF6886600123162 /* Models */,
+				68EAFA261DF6882600123162 /* Views */,
 				68F8FE861DF4D1B00032B912 /* AppDelegate.swift */,
-				68F8FE981DF4D2D70032B912 /* FeedViewController.swift */,
 				68F8FE8D1DF4D1B00032B912 /* Assets.xcassets */,
 				68F8FE8F1DF4D1B00032B912 /* LaunchScreen.storyboard */,
 				68F8FE921DF4D1B00032B912 /* Info.plist */,
 				68F8FE9A1DF4F01F0032B912 /* GrailedStore.swift */,
-				684898A21DF5006E00BDDA3E /* Listing.swift */,
+				68EAFA291DF68C0E00123162 /* Extensions.swift */,
 			);
 			path = "mchg-ios";
 			sourceTree = "<group>";
@@ -215,8 +248,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				68F8FE9B1DF4F01F0032B912 /* GrailedStore.swift in Sources */,
+				68EAFA2A1DF68C0E00123162 /* Extensions.swift in Sources */,
+				68EAFA251DF6881E00123162 /* FeedCollectionView.swift in Sources */,
 				68F8FE991DF4D2D70032B912 /* FeedViewController.swift in Sources */,
 				684898A31DF5006E00BDDA3E /* Listing.swift in Sources */,
+				68EAFA2C1DF6936C00123162 /* FeedCollectionViewCell.swift in Sources */,
 				68F8FE871DF4D1B00032B912 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
