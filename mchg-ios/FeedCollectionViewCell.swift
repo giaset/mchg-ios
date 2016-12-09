@@ -12,6 +12,7 @@ import UIKit
 class FeedCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "FeedCell"
+    static let bottomSectionHeight: CGFloat = 105
     private let imageView = UIImageView()
     var listing: Listing? {
         didSet {
@@ -23,7 +24,7 @@ class FeedCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         imageView.contentMode = .scaleAspectFit
         contentView.addSubviewForAutolayout(view: imageView)
-        imageView.pinToSuperview()
+        imageView.pinToSuperview(insets: UIEdgeInsets(top: 0, left: 0, bottom: FeedCollectionViewCell.bottomSectionHeight, right: 0))
     }
     
     required init?(coder aDecoder: NSCoder) {

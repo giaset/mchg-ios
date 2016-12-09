@@ -29,12 +29,12 @@ extension UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
     }
-    
-    func pinToSuperview() {
+ 
+    func pinToSuperview(insets: UIEdgeInsets = .zero) {
         guard let superview = superview else { return }
-        topAnchor.constraint(equalTo: superview.topAnchor).isActive = true
-        leadingAnchor.constraint(equalTo: superview.leadingAnchor).isActive = true
-        trailingAnchor.constraint(equalTo: superview.trailingAnchor).isActive = true
-        bottomAnchor.constraint(equalTo: superview.bottomAnchor).isActive = true
+        topAnchor.constraint(equalTo: superview.topAnchor, constant: insets.top).isActive = true
+        leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: insets.left).isActive = true
+        trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -insets.right).isActive = true
+        bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -insets.bottom).isActive = true
     }
 }

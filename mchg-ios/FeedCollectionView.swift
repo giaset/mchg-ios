@@ -43,6 +43,6 @@ class FeedCollectionViewFlowLayout: UICollectionViewFlowLayout {
         let totalPadding = CGFloat(numberOfColumns+1)*padding
         let aspectRatio = CGFloat(259.0/199.5) // as measured in Photoshop from a Grailed screenshot
         let width = (screenWidth-totalPadding)/CGFloat(numberOfColumns)
-        return CGSize(width: width, height: width*aspectRatio)
+        return CGSize(width: width, height: (width*aspectRatio)+FeedCollectionViewCell.bottomSectionHeight)
     }
 }
