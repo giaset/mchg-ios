@@ -32,7 +32,7 @@ class FeedCollectionViewCell: UICollectionViewCell {
     
     func setupForListing() {
         if let urlString = listing?.imageUrls?[0], let url = URL(string: urlString) {
-            imageView.af_setImage(withURL: url)
+            imageView.af_setImage(withURL: url, placeholderImage: UIImage.grailedPlaceholderImage, imageTransition: .crossDissolve(0.5))
         }
     }
 }

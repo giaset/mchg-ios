@@ -8,6 +8,21 @@
 
 import UIKit
 
+extension UIImage {
+    
+    static let grailedPlaceholderImage = UIImage.imageWithColor(UIColor(red: 0.93, green: 0.93, blue: 0.93, alpha: 1))
+    
+    class func imageWithColor(_ color: UIColor) -> UIImage? {
+        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
+        color.setFill()
+        UIRectFill(rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+}
+
 extension UIView {
     
     func addSubviewForAutolayout(view: UIView) {
