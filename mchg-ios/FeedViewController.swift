@@ -10,6 +10,7 @@ import UIKit
 
 class FeedViewController: UIViewController, UICollectionViewDataSource {
     
+    private let refreshControl = UIRefreshControl()
     private let feedCollectionView = FeedCollectionView()
     private var listings: [Listing]? {
         didSet {
@@ -19,6 +20,8 @@ class FeedViewController: UIViewController, UICollectionViewDataSource {
     
     init() {
         super.init(nibName: nil, bundle: nil)
+        refreshControl.addTarget(self, action: #selector(fetchListings), for: .valueChanged)
+        feedCollectionView.refreshControl = refreshControl
         feedCollectionView.dataSource = self
     }
     
@@ -28,12 +31,17 @@ class FeedViewController: UIViewController, UICollectionViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        GrailedStore.getListings(page: 1) { listings, error in
-            self.listings = listings
-        }
+        fetchListings()
         
         view.addSubviewForAutolayout(view: feedCollectionView)
         feedCollectionView.pinToSuperview()
+    }
+    
+    func fetchListings() {
+        GrailedStore.getListings(page: 1) { listings, error in
+            self.refreshControl.endRefreshing()
+            self.listings = listings
+        }
     }
     
     // MARK: UICollectionViewDataSource
