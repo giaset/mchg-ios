@@ -11,10 +11,15 @@ import Foundation
 class Listing {
     
     var id: String?
+    var imageUrls: [String]?
     
     init(json: [String: Any]) {
         if let id = json["id"] as? Int {
             self.id = String(id)
+        }
+        
+        if let photos = json["photos"] as? [[String: Any]] {
+            imageUrls = photos.flatMap{$0["url"] as? String}
         }
     }
 }
