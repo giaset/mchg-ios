@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FeedViewController: UIViewController, UICollectionViewDataSource {
+class FeedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     private let refreshControl = UIRefreshControl()
     private let feedCollectionView = FeedCollectionView()
@@ -24,6 +24,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource {
         refreshControl.addTarget(self, action: #selector(fetchListings), for: .valueChanged)
         feedCollectionView.refreshControl = refreshControl
         feedCollectionView.dataSource = self
+        feedCollectionView.delegate = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -38,14 +39,25 @@ class FeedViewController: UIViewController, UICollectionViewDataSource {
         feedCollectionView.pinToSuperview()
     }
     
-    func fetchListings() {
-        GrailedStore.getListings(page: 1) { listings, error in
+    private var page = 1
+    private var fetching = false
+    func fetchListings(reset: Bool = true) {
+        if fetching { return }
+        fetching = true
+        page = reset ? 1 : page+1
+        GrailedStore.getListings(page: page) { listings, error in
+            self.fetching = false
             self.refreshControl.endRefreshing()
-            self.listings = listings
+            if reset {
+                self.listings = listings
+            } else if let newListings = listings {
+                self.listings?.append(contentsOf: newListings)
+            }
         }
     }
     
     // MARK: UICollectionViewDataSource
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return listings?.count ?? 0
     }
@@ -54,5 +66,16 @@ class FeedViewController: UIViewController, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeedCollectionViewCell.identifier, for: indexPath)
         (cell as? FeedCollectionViewCell)?.listing = listings?[indexPath.row]
         return cell
+    }
+    
+    // MARK: UICollectionViewDelegate
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let scrollViewHeight = scrollView.bounds.size.height
+        let position = scrollView.contentOffset.y+scrollViewHeight
+        let triggerPoint = scrollView.contentSize.height-(scrollViewHeight/2) // trigger when we are half a screen from bottom
+        if position > triggerPoint {
+            fetchListings(reset: false)
+        }
     }
 }
