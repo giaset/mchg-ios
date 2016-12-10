@@ -2,15 +2,18 @@ PODS:
   - Alamofire (4.0.1)
   - AlamofireImage (3.1.0):
     - Alamofire (~> 4.0)
+  - SwiftDate (4.0.5)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
+  - SwiftDate
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   AlamofireImage: bb8c8351c51cb1633bb6be69b6dbbaff37ce65b7
+  SwiftDate: a945bf4150ef977824df91116ca30a04604216d3
 
-PODFILE CHECKSUM: 7f9448d0d5789b23aba8ea55be2e30218d9c4586
+PODFILE CHECKSUM: e6ab613145a75c3fc7bb3424136e9b9f41481637
 
 COCOAPODS: 1.1.1

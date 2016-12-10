@@ -4,4 +4,5 @@ use_frameworks!
 target 'mchg-ios' do
     pod 'Alamofire'
     pod 'AlamofireImage'
+    pod 'SwiftDate'
 end
