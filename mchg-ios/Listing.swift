@@ -12,6 +12,10 @@ class Listing {
     
     var id: String?
     var imageUrls: [String]?
+    var designerNames: String?
+    var size: String?
+    var title: String?
+    var price: Int?
     
     init(json: [String: Any]) {
         if let id = json["id"] as? Int {
@@ -21,5 +25,13 @@ class Listing {
         if let photos = json["photos"] as? [[String: Any]] {
             imageUrls = photos.flatMap{$0["url"] as? String}
         }
+        
+        designerNames = json["designer_names"] as? String
+        size = json["size"] as? String
+        if size == "one size" {
+            size = "OS"
+        }
+        title = json["title"] as? String
+        price = json["price"] as? Int
     }
 }
