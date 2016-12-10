@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		684898A31DF5006E00BDDA3E /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684898A21DF5006E00BDDA3E /* Listing.swift */; };
+		68C61BC21DFC622600D5B8FD /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 68C61BBF1DFC622600D5B8FD /* ProximaNova-Regular.otf */; };
+		68C61BC31DFC622600D5B8FD /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 68C61BC01DFC622600D5B8FD /* ProximaNova-Bold.otf */; };
+		68C61BC41DFC622600D5B8FD /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 68C61BC11DFC622600D5B8FD /* ProximaNova-Semibold.otf */; };
 		68EAFA251DF6881E00123162 /* FeedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EAFA241DF6881E00123162 /* FeedCollectionView.swift */; };
 		68EAFA2A1DF68C0E00123162 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EAFA291DF68C0E00123162 /* Extensions.swift */; };
 		68EAFA2C1DF6936C00123162 /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EAFA2B1DF6936C00123162 /* FeedCollectionViewCell.swift */; };
@@ -22,6 +25,9 @@
 /* Begin PBXFileReference section */
 		0A19B3DF9EB2C68687C18DAF /* Pods-mchg-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mchg-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-mchg-ios/Pods-mchg-ios.release.xcconfig"; sourceTree = "<group>"; };
 		684898A21DF5006E00BDDA3E /* Listing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
+		68C61BBF1DFC622600D5B8FD /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Regular.otf"; sourceTree = "<group>"; };
+		68C61BC01DFC622600D5B8FD /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.otf"; sourceTree = "<group>"; };
+		68C61BC11DFC622600D5B8FD /* ProximaNova-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Semibold.otf"; sourceTree = "<group>"; };
 		68EAFA241DF6881E00123162 /* FeedCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCollectionView.swift; sourceTree = "<group>"; };
 		68EAFA291DF68C0E00123162 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		68EAFA2B1DF6936C00123162 /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -54,6 +60,16 @@
 				8C09EB380D6C715E3680BB1A /* Pods_mchg_ios.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		68C61BBE1DFC620E00D5B8FD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				68C61BBF1DFC622600D5B8FD /* ProximaNova-Regular.otf */,
+				68C61BC01DFC622600D5B8FD /* ProximaNova-Bold.otf */,
+				68C61BC11DFC622600D5B8FD /* ProximaNova-Semibold.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		68EAFA261DF6882600123162 /* Views */ = {
@@ -111,6 +127,7 @@
 				68F8FE921DF4D1B00032B912 /* Info.plist */,
 				68F8FE9A1DF4F01F0032B912 /* GrailedStore.swift */,
 				68EAFA291DF68C0E00123162 /* Extensions.swift */,
+				68C61BBE1DFC620E00D5B8FD /* Fonts */,
 			);
 			path = "mchg-ios";
 			sourceTree = "<group>";
@@ -188,7 +205,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				68F8FE911DF4D1B00032B912 /* LaunchScreen.storyboard in Resources */,
+				68C61BC31DFC622600D5B8FD /* ProximaNova-Bold.otf in Resources */,
+				68C61BC41DFC622600D5B8FD /* ProximaNova-Semibold.otf in Resources */,
 				68F8FE8E1DF4D1B00032B912 /* Assets.xcassets in Resources */,
+				68C61BC21DFC622600D5B8FD /* ProximaNova-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

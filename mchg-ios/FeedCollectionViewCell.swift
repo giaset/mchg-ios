@@ -35,32 +35,37 @@ class FeedCollectionViewCell: UICollectionViewCell {
         contentView.addSubviewForAutolayout(view: imageView)
         imageView.pinToSuperview(insets: UIEdgeInsets(top: 0, left: 0, bottom: FeedCollectionViewCell.bottomSectionHeight, right: 0))
         
+        timeLabel.font = UIFont.regularFont(size: 10)
         contentView.addSubviewForAutolayout(view: timeLabel)
-        timeLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 0).isActive = true
+        timeLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8).isActive = true
         
         divider.backgroundColor = UIColor(hexString: "bfbfbf")
         contentView.addSubviewForAutolayout(view: divider)
-        divider.topAnchor.constraint(equalTo: timeLabel.bottomAnchor, constant: 0).isActive = true
+        divider.topAnchor.constraint(equalTo: timeLabel.bottomAnchor, constant: 8).isActive = true
         divider.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
         divider.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         divider.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
+        sizeLabel.font = UIFont.semiboldFont(size: 14)
         contentView.addSubviewForAutolayout(view: sizeLabel)
-        sizeLabel.topAnchor.constraint(equalTo: divider.bottomAnchor, constant: 0).isActive = true
+        sizeLabel.topAnchor.constraint(equalTo: divider.bottomAnchor, constant: 5).isActive = true
         sizeLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         
+        titleLabel.font = UIFont.semiboldFont(size: 14)
         contentView.addSubviewForAutolayout(view: titleLabel)
-        titleLabel.topAnchor.constraint(equalTo: divider.bottomAnchor, constant: 0).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: divider.bottomAnchor, constant: 5).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
         titleLabel.trailingAnchor.constraint(lessThanOrEqualTo: sizeLabel.leadingAnchor, constant: -5).isActive = true
         
+        descriptionLabel.font = UIFont.regularFont(size: 12)
         contentView.addSubviewForAutolayout(view: descriptionLabel)
-        descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 0).isActive = true
+        descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5).isActive = true
         descriptionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
         descriptionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         
+        priceLabel.font = UIFont.boldFont(size: 14)
         contentView.addSubviewForAutolayout(view: priceLabel)
-        priceLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 0).isActive = true
+        priceLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 5).isActive = true
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -78,7 +83,7 @@ class FeedCollectionViewCell: UICollectionViewCell {
             timeLabel.text = nil
         }
         
-        titleLabel.text = listing?.designerNames
+        titleLabel.text = listing?.designerNames?.uppercased()
         sizeLabel.text = listing?.size?.uppercased()
         descriptionLabel.text = listing?.title
         priceLabel.text = (listing?.price != nil) ? "$\(listing!.price!)" : nil

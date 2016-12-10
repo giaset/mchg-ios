@@ -58,6 +58,25 @@ extension UIImage {
     }
 }
 
+extension UIFont {
+    
+    static let semiboldName = "ProximaNova-Semibold"
+    static let regularName = "ProximaNova-Regular"
+    static let boldName = "ProximaNova-Bold"
+    
+    class func semiboldFont(size: CGFloat) -> UIFont? {
+        return UIFont(name: semiboldName, size: size)
+    }
+    
+    class func regularFont(size: CGFloat) -> UIFont? {
+        return UIFont(name: regularName, size: size)
+    }
+    
+    class func boldFont(size: CGFloat) -> UIFont? {
+        return UIFont(name: boldName, size: size)
+    }
+}
+
 extension UIView {
     
     func addSubviewForAutolayout(view: UIView) {

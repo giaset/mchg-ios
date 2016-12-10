@@ -20,6 +20,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource {
     
     init() {
         super.init(nibName: nil, bundle: nil)
+        title = "G R A I L E D"
         refreshControl.addTarget(self, action: #selector(fetchListings), for: .valueChanged)
         feedCollectionView.refreshControl = refreshControl
         feedCollectionView.dataSource = self
