@@ -7,6 +7,7 @@
 //
 
 import AlamofireImage
+import SwiftDate
 import UIKit
 
 class FeedCollectionViewCell: UICollectionViewCell {
@@ -71,7 +72,12 @@ class FeedCollectionViewCell: UICollectionViewCell {
             imageView.af_setImage(withURL: url, placeholderImage: UIImage.grailedPlaceholderImage, imageTransition: .crossDissolve(0.5))
         }
         
-        timeLabel.text = "TODO"
+        if let updatedAt = listing?.updatedAt, let colloquial = try? updatedAt.colloquialSinceNow().colloquial {
+            timeLabel.text = colloquial.uppercased()
+        } else {
+            timeLabel.text = nil
+        }
+        
         titleLabel.text = listing?.designerNames
         sizeLabel.text = listing?.size?.uppercased()
         descriptionLabel.text = listing?.title
