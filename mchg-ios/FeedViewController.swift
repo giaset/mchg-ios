@@ -25,6 +25,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         feedCollectionView.refreshControl = refreshControl
         feedCollectionView.dataSource = self
         feedCollectionView.delegate = self
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -76,6 +77,12 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         let triggerPoint = scrollView.contentSize.height-(scrollViewHeight/2) // trigger when we are half a screen from bottom
         if position > triggerPoint {
             fetchListings(reset: false)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let listing = listings?[indexPath.row] {
+            navigationController?.pushViewController(ListingDetailViewController(listing: listing), animated: true)
         }
     }
 }

@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = UINavigationController(rootViewController: FeedViewController())
         navigationController.navigationBar.isTranslucent = false
         navigationController.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont.boldFont(size: 12)!]
+        navigationController.navigationBar.tintColor = .black
         window?.rootViewController = navigationController
         return true
     }

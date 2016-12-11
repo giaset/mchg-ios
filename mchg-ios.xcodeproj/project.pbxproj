@@ -11,6 +11,7 @@
 		68C61BC21DFC622600D5B8FD /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 68C61BBF1DFC622600D5B8FD /* ProximaNova-Regular.otf */; };
 		68C61BC31DFC622600D5B8FD /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 68C61BC01DFC622600D5B8FD /* ProximaNova-Bold.otf */; };
 		68C61BC41DFC622600D5B8FD /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 68C61BC11DFC622600D5B8FD /* ProximaNova-Semibold.otf */; };
+		68C61BC61DFDB41000D5B8FD /* ListingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C61BC51DFDB41000D5B8FD /* ListingDetailViewController.swift */; };
 		68EAFA251DF6881E00123162 /* FeedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EAFA241DF6881E00123162 /* FeedCollectionView.swift */; };
 		68EAFA2A1DF68C0E00123162 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EAFA291DF68C0E00123162 /* Extensions.swift */; };
 		68EAFA2C1DF6936C00123162 /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EAFA2B1DF6936C00123162 /* FeedCollectionViewCell.swift */; };
@@ -28,6 +29,7 @@
 		68C61BBF1DFC622600D5B8FD /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Regular.otf"; sourceTree = "<group>"; };
 		68C61BC01DFC622600D5B8FD /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.otf"; sourceTree = "<group>"; };
 		68C61BC11DFC622600D5B8FD /* ProximaNova-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Semibold.otf"; sourceTree = "<group>"; };
+		68C61BC51DFDB41000D5B8FD /* ListingDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingDetailViewController.swift; sourceTree = "<group>"; };
 		68EAFA241DF6881E00123162 /* FeedCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCollectionView.swift; sourceTree = "<group>"; };
 		68EAFA291DF68C0E00123162 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		68EAFA2B1DF6936C00123162 /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				68F8FE981DF4D2D70032B912 /* FeedViewController.swift */,
+				68C61BC51DFDB41000D5B8FD /* ListingDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68C61BC61DFDB41000D5B8FD /* ListingDetailViewController.swift in Sources */,
 				68F8FE9B1DF4F01F0032B912 /* GrailedStore.swift in Sources */,
 				68EAFA2A1DF68C0E00123162 /* Extensions.swift in Sources */,
 				68EAFA251DF6881E00123162 /* FeedCollectionView.swift in Sources */,

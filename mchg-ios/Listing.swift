@@ -20,6 +20,7 @@ class Listing {
     var size: String?
     var title: String?
     var price: Int?
+    var description: String?
     
     init(json: [String: Any]) {
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
@@ -47,5 +48,6 @@ class Listing {
         }
         title = json["title"] as? String
         price = json["price"] as? Int
+        description = json["description"] as? String
     }
 }
